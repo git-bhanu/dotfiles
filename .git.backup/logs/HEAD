@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 6cdc4f0a3892b54c97e55e8b1ab94882d528f3db Bhanu Singh <bsingh@sonicwall.com> 1764655063 +0530	clone: from github.com:git-bhanu/dotfiles.git
+6cdc4f0a3892b54c97e55e8b1ab94882d528f3db 34eb5cb1396ee1081049d834004fa4928661059d Bhanu Singh <bsingh@sonicwall.com> 1764658305 +0530	commit: add ghostty and nvim config files
+34eb5cb1396ee1081049d834004fa4928661059d 126c700fe98f95866a118e7263dd014b39a15d1c Bhanu Singh <bsingh@sonicwall.com> 1764658463 +0530	commit: fixed atuin config directory structre and remove git from ghostty shaders
+126c700fe98f95866a118e7263dd014b39a15d1c 7b199b5691a081e17737ef4a55a955166b4d3b87 Bhanu Singh <bsingh@sonicwall.com> 1764659096 +0530	commit: add zsh
+7b199b5691a081e17737ef4a55a955166b4d3b87 c8312a38430f3427791d4598ea702817a432c869 Bhanu Singh <bsingh@sonicwall.com> 1764660693 +0530	commit: readme added
+c8312a38430f3427791d4598ea702817a432c869 227706321f466186a8a737c7c84bd8ed1bde5ebc Bhanu Singh <bsingh@sonicwall.com> 1764660723 +0530	commit: readme added

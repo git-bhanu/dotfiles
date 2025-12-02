@@ -1,0 +1,6 @@
+# custom-shader = ~/.config/ghostty/shaders/ghostty-shaders/retro-terminal.glsl
+font-family = Menlo
+font-size = 15
+background-opacity = 1
+theme = Adventure
+adjust-cell-height = 15
