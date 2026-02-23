@@ -28,6 +28,7 @@ export CLAUDE_CODE_USE_BEDROCK=1
 
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS=4096
 export MAX_THINKING_TOKENS=1024
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 export PATH="~/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -35,8 +36,12 @@ export PATH="$HOME/.local/bin:$PATH"
 fpath=(/Users/sonicwall/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
+eval "$(zoxide init zsh)"
 # End of Docker CLI completions
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# opencode
+export PATH=/Users/bhanu/.opencode/bin:$PATH
