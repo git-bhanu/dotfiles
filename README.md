@@ -9,22 +9,23 @@ Welcome to my meticulously crafted development environment. These aren't just do
 ### **Ghostty** - Terminal That Actually Matters
 
 - Modern GPU-accelerated terminal that makes your old terminal jealous
-- Menlo font at size 15 because we have standards
+- Maple Mono NF at size 16 with Nerd Font glyphs
 - Adventure theme for that perfect aesthetic
 
 ### **Neovim + LazyVim** - Editor of Champions
 
 - LazyVim distribution because why reinvent the wheel when you can turbo-charge it
-- Rose Pine colorscheme for those cozy coding vibes
+- Catppuccin Mocha as the default colorscheme
 - Smear cursor with animations because smooth is life
 - Undotree plugin for when you need to time-travel through your mistakes
-- Language support for TypeScript, Vue, Docker, Helm, JSON, and Markdown
+- Language support for TypeScript, Vue, Docker, Helm, JSON, Markdown, CSS, and HTML
+- Tailwind-aware color previews and Emmet/CSS/HTML LSP setup
 
 ### **Zsh + Powerlevel10k** - Shell Game Strong
 
 - Instant prompt because waiting is for mortals
 - NVM and pnpm integration for the Node.js lifestyle
-- Custom SonicWall host aliases because corporate life has its perks
+- Better defaults for history, completion, navigation, and aliases
 - AWS Bedrock integration with Claude Code because AI is the future
 
 ### **Atuin** - Shell History That Remembers Everything
@@ -35,9 +36,8 @@ Welcome to my meticulously crafted development environment. These aren't just do
 
 ### **AWS + Claude Code Integration**
 
-- Pre-configured for ai-sandbox environment
-- Custom model ARNs for maximum AI assistance
-- 4096 max output tokens because go big or go home
+- Bedrock-backed Claude Code environment variables are pre-set in `zsh/.zshrc`
+- 4096 max output tokens and 1024 thinking tokens because go big or go home
 
 ## Installation (The Stow Way)
 
@@ -62,15 +62,21 @@ stow */
 
 ```bash
 # Install the essentials
-brew install neovim stow atuin ghostty
-brew install --cask font-menlo-for-powerline  # or your preferred Menlo variant
+brew install neovim stow atuin ghostty zoxide
 
-# Get that Powerlevel10k goodness
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# Install a Nerd Font compatible Maple Mono build, or change the Ghostty font in the config.
+# Example Homebrew cask name on many setups:
+# brew install --cask font-maple-mono-nf
 
 # Node.js ecosystem (because who doesn't need 47 package managers)
 brew install nvm pnpm
 ```
+
+### Fresh Clone Notes
+
+- `zsh/.p10k.zsh` is included in this repo and expects `zsh/powerlevel10k` to exist beside it.
+- This repository currently tracks `zsh/powerlevel10k` as a gitlink, so make sure that directory is present after cloning. If it is missing, clone `https://github.com/romkatv/powerlevel10k.git` into `zsh/powerlevel10k`.
+- Ghostty shaders are optional. The sample shader line in `ghostty/.config/ghostty/config` is commented out and expects `ghostty/.config/ghostty/shaders/ghostty-shaders` only if you want that extra effect.
 
 ## The Philosophy
 
@@ -80,7 +86,7 @@ brew install nvm pnpm
 
 ## Customization Notes
 
-- Powerlevel10k config lives in `~/.p10k.zsh` (run `p10k configure` to remake it)
+- Powerlevel10k config lives in `zsh/.p10k.zsh` and is sourced relative to the stowed file
 - Ghostty shaders are there when you're feeling fancy - just uncomment `custom-shader` in the config
 - Atuin syncs across machines if you're into that distributed lifestyle
 - LazyVim updates itself because it respects your time
@@ -96,4 +102,3 @@ Using this setup may cause:
 
 ---
 **Pro tip**: These dotfiles are like a fine wine - they get better with age and the occasional commit.
-
